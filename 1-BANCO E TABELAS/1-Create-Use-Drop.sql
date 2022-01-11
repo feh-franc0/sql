@@ -1,0 +1,17 @@
+/* Na linha que quer executar o comando,use: Ctrl+Enter */
+
+/*CRIAR UM BANCO DE DADOS*/
+CREATE DATABASE banco;
+
+/*PARA ENTRAR DENTRO DO BANCO*/
+USE banco;
+
+/*CRIANDO OUTRO BANCO*/
+CREATE DATABASE banco2;
+
+/*USANDO O banco2*/
+USE banco2;
+
+/*VAMOS DELETAR O banco2, PRIMEIRO SAIA DELE E VÁ PARA OUTRO E DEPOIS O EXCLUA*/
+USE banco;
+DROP DATABASE banco2;
