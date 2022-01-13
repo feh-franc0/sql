@@ -1,0 +1,16 @@
+--WHERE : PARA DATA E SEUS CAMPOS(ano-mes-dia)
+
+--SELECIONAR TUDO DE TB_FUNCIONARIOS ONDE cadastro FOR MAIOR QUE '2020-11-23'
+SELECT * FROM tb_funcionarios WHERE cadastro > '2020-11-23';
+
+--MODIFICAR NA TB_FUNCIONARIOS ONDE admissao = DATA_ATUAL() ONDE id =   1;
+UPDATE tb_funcionarios SET admissao = CURRENT_DATE() WHERE id = 1;
+
+--MODIFICAR NA TB_FUNCIONARIOS ONDE admissao = ADICIONAR_DATA(DATA_ATUAL(), ComINTERVALO 60 dias) ONDE id = 2;
+UPDATE tb_funcionarios SET admissao = DATE_ADD(CURRENT_DATE(), INTERVAL 60 DAY) WHERE id = 2;
+
+--MOSTRAR(SELECIONAR) DIFERENCAENTRE(admissao, DATA_ATUAL()) APELIDO 'diferenca de dia' PARA TB_FUNCIONARIOS ONDE id = 2;
+SELECT DATEDIFF(admissao, CURRENT_DATE()) AS 'diferença de dia' FROM tb_funcionarios WHERE id = 2;
+
+--SELECIONAR TUDO DE TB_FUNCIONARIOS ONDE MES(admissao) = 7;
+SELECT * FROM tb_funcionarios WHERE MONTH(admissao) = 7;
